@@ -1,9 +1,10 @@
+// src/components/Header.jsx
+import './Header.css';
+
 function Header() {
-    return (
-      <header>
-        <img src="./assets/Logo.svg" alt="Little Lemon Logo"/>
-      </header>
-    );
-  }
+  return (
+    <img src="./assets/Logo.svg" alt="Little Lemon Logo" className="logo" />
+  );
+}
 
 export default Header;
