@@ -1,35 +1,147 @@
-/* Typography */
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Helvetica Neue', sans-serif;
-  color: #333;
-  margin: 0.5rem 0;
+/* === Fonts === */
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Markazi+Text:wght@500&display=swap');
+
+/* === Variables === */
+:root {
+  /* Fonts */
+  --font-heading: 'Markazi Text', serif;
+  --font-body: 'Karla', sans-serif;
+
+  /* Colors */
+  --color-primary: #495e57;
+  --color-secondary: #f4ce14;
+  --color-accent: #ee9972;
+  --color-bg: #edefee;
+  --color-text: #333333;
+  --color-heading: #4a4a4a;
+
+  /* Styles */
+  --radius: 0.5rem;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-  font-size: 2.5rem;
-  color: #495e57;
+/* === Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-h2 {
-  font-size: 2rem;
-  color: #E2725B;
+html {
+  scroll-behavior: smooth;
 }
 
-p {
-  font-size: 1rem;
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  background-color: var(--color-bg);
+  color: var(--color-text);
   line-height: 1.6;
-  color: #4a4a4a;
+  -webkit-font-smoothing: antialiased;
 }
 
-span {
-  font-size: 0.9rem;
-  color: #6c6c6c;
+/* === Typography === */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-heading);
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
 }
 
+h1 { font-size: 4rem; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 2rem; }
+h4 { font-size: 1.75rem; }
+h5 { font-size: 1.5rem; }
+h6 { font-size: 1.25rem; }
+
+p, span {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+}
+
+/* === Links === */
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+/* === Buttons === */
+button {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--color-accent);
+  color: #ffffff;
+}
+
+/* === Images === */
 img {
   max-width: 100%;
   height: auto;
-  border-radius: 0.5rem;
   display: block;
+  border-radius: var(--radius);
 }
 
+/* === Layout Helpers === */
+section {
+  padding: 4rem 1rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* === Card Styling === */
+.card {
+  background-color: #ffffff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+}
+
+/* === Navigation === */
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav a {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* === Responsive Typography === */
+@media (max-width: 768px) {
+  h1 { font-size: 3rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.5rem; }
+  p, span { font-size: 1rem; }
+}
