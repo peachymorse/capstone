@@ -3,11 +3,11 @@
 
 /* === Variables === */
 :root {
-  /* Fonts */
+
   --font-heading: 'Markazi Text', serif;
   --font-body: 'Karla', sans-serif;
 
-  /* Colors */
+
   --color-primary: #495e57;
   --color-secondary: #f4ce14;
   --color-accent: #ee9972;
@@ -15,12 +15,11 @@
   --color-text: #333333;
   --color-heading: #4a4a4a;
 
-  /* Styles */
   --radius: 0.5rem;
   --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* === Reset === */
+
 * {
   margin: 0;
   padding: 0;
@@ -40,7 +39,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* === Typography === */
+
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   color: var(--color-heading);
@@ -63,7 +62,6 @@ p, span {
   margin-bottom: 1rem;
 }
 
-/* === Links === */
 a {
   color: var(--color-primary);
   text-decoration: none;
@@ -74,7 +72,7 @@ a:hover {
   color: var(--color-accent);
 }
 
-/* === Buttons === */
+
 button {
   font-family: var(--font-body);
   font-size: 1rem;
@@ -94,7 +92,7 @@ button:hover {
   color: #ffffff;
 }
 
-/* === Images === */
+
 img {
   max-width: 100%;
   height: auto;
@@ -102,7 +100,7 @@ img {
   border-radius: var(--radius);
 }
 
-/* === Layout Helpers === */
+
 section {
   padding: 4rem 1rem;
 }
@@ -121,7 +119,7 @@ section {
   padding: 1.5rem;
 }
 
-/* === Navigation === */
+
 nav ul {
   display: flex;
   list-style: none;
@@ -138,7 +136,7 @@ nav a {
   font-weight: bold;
 }
 
-/* === Responsive Typography === */
+
 @media (max-width: 768px) {
   h1 { font-size: 3rem; }
   h2 { font-size: 2rem; }
