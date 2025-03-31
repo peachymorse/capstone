@@ -1,7 +1,6 @@
-/* === Fonts === */
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Markazi+Text:wght@500&display=swap');
 
-/* === Variables === */
+
 :root {
 
   --font-heading: 'Markazi Text', serif;
