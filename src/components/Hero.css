@@ -1,9 +1,9 @@
 .hero-section {
-    background-color: var(--color-primary); /* Deep green background */
+    background-color: var(--color-primary); 
     padding: 4rem 1rem;
     color: white;
   }
-  
+
   .hero-container {
     display: flex;
     justify-content: space-between;
@@ -13,12 +13,12 @@
     max-width: 1200px;
     margin: 0 auto;
   }
-  
+
   .hero-text {
     flex: 1;
     min-width: 300px;
   }
-  
+
   .hero-text h1 {
     font-family: var(--font-heading);
     font-size: 4rem;
@@ -26,31 +26,30 @@
     color: var(--color-secondary); /* Yellow heading */
     margin-bottom: 0.5rem;
   }
-  
+
   .hero-text h2 {
     font-size: 2.5rem;
     color: white;
     margin-bottom: 1rem;
   }
-  
+
   .hero-text p {
     font-size: 1.125rem;
     color: white;
     margin-bottom: 2rem;
     max-width: 40ch;
   }
-  
+
   .hero-image {
     flex: 1;
     min-width: 300px;
     display: flex;
     justify-content: center;
   }
-  
+
   .hero-image img {
     border-radius: var(--radius);
     max-width: 100%;
     height: auto;
     box-shadow: var(--shadow);
   }
-  
