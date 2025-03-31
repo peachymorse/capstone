@@ -17,8 +17,8 @@ function About() {
           </p>
         </div>
         <div className="about-images">
-          <img src="/assets/Mario and Adrian A.jpg" alt="Chef Adrian" className="image-top" />
-          <img src="/assets/Mario and Adrian b.jpg" alt="Chef Mario" className="image-bottom" />
+          <img src="/assets/Mario and Adrian A.jpg" alt="Chef Adrian" className="image-top" loading="lazy" />
+          <img src="/assets/Mario and Adrian b.jpg" alt="Chef Mario" className="image-bottom" loading="lazy" />
         </div>
       </div>
     </section>

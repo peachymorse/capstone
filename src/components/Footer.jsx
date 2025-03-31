@@ -6,7 +6,7 @@ function Footer() {
       <div className="footer-container">
         {/* Left Column: Image */}
         <div className="footer-image">
-          <img src="/assets/Mario and Adrian b.jpg" alt="Little Lemon Chefs" />
+          <img src="./assets/restaurant.jpg" alt="Little Lemon Resturant" loading="lazy" />
         </div>
 
         {/* Contact */}
