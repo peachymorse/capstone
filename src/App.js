@@ -21,7 +21,7 @@ function App() {
 
         <main>
           <Routes>
-            <Route path="/home" element={<Homepage />} />
+            <Route path="/" element={<Homepage />} />
             <Route path="/booking" element={<BookingPage />} />
           </Routes>
         </main>
@@ -33,3 +33,4 @@ function App() {
 }
 
 export default App;
+

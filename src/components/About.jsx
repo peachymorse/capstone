@@ -1,18 +1,29 @@
+import './About.css';
+
 function About() {
-    return (
-      <section className="about">
+  return (
+    <section className="about-section">
+      <div className="container about-container">
         <div className="about-text">
-          <h2>About Little Lemon</h2>
+          <h2>Little Lemon</h2>
+          <h3>Chicago</h3>
           <p>
-            Little Lemon is a neighborhood bistro that serves simple food and
-            classic cocktails in a lively but casual environment.
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+            Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+          </p>
+          <p>
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+            Velit officia consequat duis enim velit mollit.
           </p>
         </div>
-        <div className="about-image">
-          <img src="" alt="Owners Mario and Adrian" />
+        <div className="about-images">
+          <img src="/assets/Mario and Adrian A.jpg" alt="Chef Adrian" className="image-top" />
+          <img src="/assets/Mario and Adrian b.jpg" alt="Chef Mario" className="image-bottom" />
         </div>
-      </section>
-    );
-  }
+      </div>
+    </section>
+  );
+}
 
-  export default About;
+export default About;
+

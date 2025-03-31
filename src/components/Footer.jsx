@@ -1,31 +1,33 @@
-// src/components/Footer.jsx
+import './Footer.css';
 
 function Footer() {
-    return (
-      <footer>
-        <div className="footer-section">
-          <img src="./assets/Logo.svg" alt="Little lemon logo" />
+  return (
+    <footer className="footer">
+      <div className="footer-container">
+        {/* Left Column: Image */}
+        <div className="footer-image">
+          <img src="/assets/Mario and Adrian b.jpg" alt="Little Lemon Chefs" />
         </div>
 
-        <div className="footer-section">
-          <div>
-            <h4>Contact</h4>
-            <p>Address</p>
-            <p>Phone number</p>
-            <p>Email</p>
-          </div>
+        {/* Contact */}
+        <div className="footer-column">
+          <h4>Contact</h4>
+          <p>123 Lemon Street</p>
+          <p>Chicago, IL</p>
+          <p>(312) 555-0199</p>
+          <p>contact@littlelemon.com</p>
         </div>
 
-        <div className="footer-section">
-          <div>
-            <h4>Social Media Links</h4>
-            <p>Address</p>
-            <p>Phone number</p>
-            <p>Email</p>
-          </div>
+        {/* Social Media */}
+        <div className="footer-column">
+          <h4>Social Media</h4>
+          <p>Instagram</p>
+          <p>Facebook</p>
+          <p>Twitter</p>
         </div>
-      </footer>
-    );
-  }
+      </div>
+    </footer>
+  );
+}
 
-  export default Footer;
+export default Footer;
