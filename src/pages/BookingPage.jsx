@@ -1,11 +1,13 @@
+import React from "react";
+import BookingForm from "../components/BookingForm";
 
-function BookingPage() {
-    return (
-      <>
-        <h1>Reserve a Table</h1>
-        {/* Add your reservation form here */}
-      </>
-    );
-  }
+const BookingPage = () => {
+  return (
+    <div className="booking-page">
+      <h1>Reserve a Table</h1>
+      <BookingForm />
+    </div>
+  );
+};
 
-  export default BookingPage;
+export default BookingPage;

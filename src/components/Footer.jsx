@@ -4,7 +4,6 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="footer-container">
-        {/* Left Column: Image */}
         <div className="footer-image">
           <img src="./assets/restaurant.jpg" alt="Little Lemon Resturant" loading="lazy" />
         </div>

@@ -6,3 +6,10 @@
     margin: 0 auto;
     align-items: start;
   }
+
+  .footer-image img {
+    width: 300px;  
+    height: auto;
+    border-radius: 16px; 
+    object-fit: cover;  
+  }
