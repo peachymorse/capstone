@@ -1,24 +1,13 @@
 import React, { useState } from "react";
 import './BookingForm.css';
 
-const BookingForm = () => {
-  // 1️⃣ State variables for each form field
+const BookingForm = ({ availableTimes, setAvailableTimes })  => {
+
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
   const [guests, setGuests] = useState(1);
   const [occasion, setOccasion] = useState("");
 
-  // 2️⃣ State array for available booking times
-  const [availableTimes, setAvailableTimes] = useState([
-    "17:00",
-    "18:00",
-    "19:00",
-    "20:00",
-    "21:00",
-    "22:00",
-  ]);
-
-  // 3️⃣ Submit handler
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = {
@@ -28,7 +17,7 @@ const BookingForm = () => {
       occasion,
     };
     console.log("Form submitted:", formData);
-    // Later you'll send this data to an API
+    // note to self for setting up the API
   };
 
   return (
