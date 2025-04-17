@@ -1,0 +1,60 @@
+.confirmation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 120px);
+    padding: 60px 20px;
+    background-color: var(--color-bg);
+  }
+  
+  .confirmation-card {
+    background-color: #fff;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 2rem;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .confirmation-card h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+  }
+  
+  .confirmation-card p {
+    font-family: var(--font-body);
+    margin-bottom: 1.5rem;
+    font-size: 1.125rem;
+  }
+  
+  .confirmation-card ul {
+    text-align: left;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+  }
+  
+  .confirmation-card li {
+    margin-bottom: 0.5rem;
+    font-size: 1.125rem;
+  }
+  
+  .confirmation-card button {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .confirmation-card button:hover {
+    background-color: var(--color-accent);
+    color: #fff;
+  }
+  

@@ -28,7 +28,6 @@ const BookingPage = () => {
 
   return (
     <div className="booking-page">
-      <h1>Book a Table</h1>
       {!formData ? (
         <BookingForm availableTimes={availableTimes} dispatch={dispatch} setFormData={setFormData} />
       ) : (

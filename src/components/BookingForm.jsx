@@ -9,8 +9,45 @@ const BookingForm = ({ availableTimes, dispatch, setFormData }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
 
+  const validateForm = () => {
+    if (name.trim().length < 2) {
+      alert("Please enter a valid name.");
+      return false;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      alert("Please enter a valid email address.");
+      return false;
+    }
+
+    if (!date) {
+      alert("Please select a date.");
+      return false;
+    }
+
+    if (!time) {
+      alert("Please select a time.");
+      return false;
+    }
+
+    if (guests < 1 || guests > 10) {
+      alert("Guests must be between 1 and 10.");
+      return false;
+    }
+
+    if (!occasion) {
+      alert("Please select an occasion.");
+      return false;
+    }
+
+    return true;
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (!validateForm()) return;
 
     const booking = {
       name,
@@ -36,59 +73,83 @@ const BookingForm = ({ availableTimes, dispatch, setFormData }) => {
   };
 
   return (
+
+<div className="booking-form-wrapper">
+<h1 className="booking-form-title">Book a Table</h1>
     <form onSubmit={handleSubmit} className="booking-form">
-      <label>
-        Full Name:
-        <input type="text" value={name} onChange={(e) => setName(e.target.value)} required />
-      </label>
+  <label htmlFor="name">Full Name:</label>
+  <input
+    id="name"
+    type="text"
+    value={name}
+    onChange={(e) => setName(e.target.value)}
+    required
+  />
 
-      <label>
-        Email:
-        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-      </label>
+  <label htmlFor="email">Email:</label>
+  <input
+    id="email"
+    type="email"
+    value={email}
+    onChange={(e) => setEmail(e.target.value)}
+    required
+  />
 
-      <label>
-        Date:
-        <input
-          type="date"
-          value={date}
-          onChange={(e) => {
-            const newDate = e.target.value;
-            setDate(newDate);
-            setTime("");
-            dispatch({ type: "UPDATE_TIMES", payload: newDate });
-          }}
-          required
-        />
-      </label>
+  <label htmlFor="date">Date:</label>
+  <input
+    id="date"
+    type="date"
+    value={date}
+    onChange={(e) => {
+      const newDate = e.target.value;
+      setDate(newDate);
+      setTime("");
+      dispatch({ type: "UPDATE_TIMES", payload: newDate });
+    }}
+    required
+  />
 
-      <label>
-        Time:
-        <select value={time} onChange={(e) => setTime(e.target.value)} required>
-          <option value="">Select a time</option>
-          {availableTimes.map((t) => (
-            <option key={t} value={t}>{t}</option>
-          ))}
-        </select>
-      </label>
+  <label htmlFor="time">Time:</label>
+  <select
+    id="time"
+    value={time}
+    onChange={(e) => setTime(e.target.value)}
+    required
+  >
+    <option value="">Select a time</option>
+    {availableTimes.map((t) => (
+      <option key={t} value={t}>{t}</option>
+    ))}
+  </select>
 
-      <label>
-        Number of guests:
-        <input type="number" min="1" max="10" value={guests} onChange={(e) => setGuests(e.target.value)} required />
-      </label>
+  <label htmlFor="guests">Number of guests:</label>
+  <input
+    id="guests"
+    type="number"
+    min="1"
+    max="10"
+    value={guests}
+    onChange={(e) => setGuests(e.target.value)}
+    required
+  />
 
-      <label>
-        Occasion:
-        <select value={occasion} onChange={(e) => setOccasion(e.target.value)} required>
-          <option value="">Select</option>
-          <option value="None">None</option>
-          <option value="Birthday">Birthday</option>
-          <option value="Anniversary">Anniversary</option>
-        </select>
-      </label>
+  <label htmlFor="occasion">Occasion:</label>
+  <select
+    id="occasion"
+    value={occasion}
+    onChange={(e) => setOccasion(e.target.value)}
+    required
+  >
+    <option value="">Select</option>
+    <option value="None">None</option>
+    <option value="Birthday">Birthday</option>
+    <option value="Anniversary">Anniversary</option>
+  </select>
 
-      <button type="submit">Submit Reservation</button>
-    </form>
+  <button type="submit" aria-label="On Click">Submit Reservation</button>
+</form>
+</div>
+
   );
 };
 
